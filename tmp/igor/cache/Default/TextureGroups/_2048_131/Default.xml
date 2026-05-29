@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="64" texheight="128">default_0.bz2</texture>
+  <tpe x="0" y="2" tpage="default_0.bz2">spr_background_State_Machine_5c30c36e-40d4-4315-8c09-05ba555b6fa3.tpe</tpe>
+  <tpe x="2" y="70" tpage="default_0.bz2">spr_ground_State_Machine_20a8b18b-7f19-4810-b75c-da1d6c624771.tpe</tpe>
+  <tpe x="2" y="90" tpage="default_0.bz2">spr_player_State_Machine_53942aa0-6f08-4d31-aff9-ef951cae72cb.tpe</tpe>
+</TextureGroup>
