@@ -44,7 +44,7 @@ function state_machine (_initial_state = undefined) constructor
         }
     }
 
-    static _set_state   = function (_state)
+    static set_state   = function (_state)
     {
         if (is_string(_state))
         {
@@ -138,7 +138,7 @@ function state_machine (_initial_state = undefined) constructor
 
                 if (method(instance, _destinations[$ name]) ())
                 {
-                    _set_state(name);
+                    set_state(name);
                     break;
                 }
                 i++;

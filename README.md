@@ -1,13 +1,29 @@
-Hierarchical State Machine (HSM) for GameMaker
+# Hierarchical State Machine (HSM) for GameMaker
 
-Files added/modified:
-- `scripts/scr_state_machine/scr_state_machine.gml`: HSM utilities (state_create, state_machine_create, start, update, change, event)
-- `objects/obj_player/Create_0.gml`: example state hierarchy (root -> grounded -> idle/walk, air)
-- `objects/obj_player/Step_0.gml`: calls `state_machine_update` each step
+# Setup
+- You can download the .yymps file or just copy the raw script from the .gml file, both works fine. :shipit:
 
-Quick usage:
-- Define states via `state_create(name, parent, handlers)`.
-- Create a machine with `state_machine_create(rootState)` and start with `state_machine_start(hsm, id)`.
-- Call `state_machine_update(hsm, id)` from the object's Step event.
+# Features
+    * Separated functions for every state level (on_enter, on_step and on_exit).
+    * Easy transitions between states.
+    * Choose between state transition type (with add_transition, or simply set_event functions).
+    * Nest state behavior into a concise piece of code.
+    * Has a parent like behavior, not exatly a hierarchy, but something between Hierarchical and a simple/Finite State Machine, with a fixed state named "parent".
 
-Handlers receive the instance as the first argument and may call `state_machine_change(instance.hsm, targetState, instance)` to switch states.
+# Quick usage:
+
+## Create Event:
+- On create event, define states via `state_machine = new state_machine("Idle");`.
+- Set a parent state that runs every step with `state_machine.parent_run = function(){ //parent things }`
+- Add states using `state_machine.add_states("Name", { on_enter: function(){}})`. It can be used with on_step, that runs every step and with on_exit, that runs at the last frame.
+- You can change states manually using `state_machine.set_state("State_Name");` or with `state_machine.add_transition(_from_state, _destination_state, _condition)`
+
+- Example:
+
+```gml
+state_machine.add_transition("Idle", "Jump", function () {
+    return jump_input && on_ground;
+});
+```
+## Step Event:
+- Finally, call `state_machine.update(id);`.
