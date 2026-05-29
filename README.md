@@ -1,5 +1,5 @@
 # Hierarchical State Machine (HSM) for GameMaker
-### This is just a Hybrid State Machine that I created for use in my projects; feel free to use it.
+### • This is just a Hybrid State Machine that I created for use in my projects; feel free to use it.
 
 
 # Setup
