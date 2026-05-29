@@ -1,14 +1,18 @@
 # Hierarchical State Machine (HSM) for GameMaker
+This is just a Hybrid State Machine that I created for use in my projects; feel free to use it.
+
 
 # Setup
 - You can download the .yymps file or just copy the raw script from the .gml file, both works fine. :shipit:
 
 # Features
-    * Separated functions for every state level (on_enter, on_step and on_exit).
-    * Easy transitions between states.
-    * Choose between state transition type (with add_transition, or simply set_event functions).
-    * Nest state behavior into a concise piece of code.
-    * Has a parent like behavior, not exatly a hierarchy, but something between Hierarchical and a simple/Finite State Machine, with a fixed state named "parent".
+
+- Separated functions for every state level (on_enter, on_step and on_exit).  
+- Easy transitions between states.  
+- Choose between state transition type (with add_transition, or simply set_event functions).  
+- Nest state behavior into a concise piece of code. 
+- Has a parent like behavior, not exatly a hierarchy, but something between Hierarchical and a simple
+  Finite State Machine, with a fixed state named "parent".
 
 # Quick usage:
 
