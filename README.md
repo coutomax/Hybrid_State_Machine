@@ -1,4 +1,6 @@
 # Hierarchical State Machine (HSM) for GameMaker
+### This is just a Hybrid State Machine that I created for use in my projects; feel free to use it.
+
 
 # Setup
 - You can download the .yymps file or just copy the raw script from the .gml file, both works fine. :shipit:
